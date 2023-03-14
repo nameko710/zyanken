@@ -7,12 +7,94 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvHand"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/tv_hand"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btDecision"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/bt_decision"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btDecision"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tvHand"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/imageGu"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/select_radio"
+            android:button="@null"
+            android:drawableBottom="@drawable/janken_gu"
+            android:text="@string/tv_gu"
+            android:textAlignment="center"
+            tools:ignore="VisualLintButtonSize" />
+
+        <RadioButton
+            android:id="@+id/imageChoki"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/select_radio"
+            android:button="@null"
+            android:drawableBottom="@drawable/janken_choki"
+            android:text="@string/tv_choki"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            tools:ignore="VisualLintButtonSize" />
+
+        <RadioButton
+            android:id="@+id/imagePa"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/select_radio"
+            android:button="@null"
+            android:drawableBottom="@drawable/janken_pa"
+            android:text="@string/tv_pa"
+            android:textAlignment="center"
+            tools:ignore="VisualLintButtonSize" />
+
+    </RadioGroup>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="135dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="135dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
