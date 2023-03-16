@@ -5,4 +5,9 @@
     <string name="tv_gu">グー</string>
     <string name="tv_choki">チョキ</string>
     <string name="tv_pa">パー</string>
+    <string name="rt_result">結果</string>
+    <string name="rt_win">勝ち</string>
+    <string name="rt_draw">引き分け</string>
+    <string name="rt_lose">負け</string>
+    <string name="bt_back">戻る</string>
 </resources>
