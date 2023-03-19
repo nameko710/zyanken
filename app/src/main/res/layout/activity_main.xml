@@ -1,101 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#405CB62A"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/tvHand"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="24dp"
         android:text="@string/tv_hand"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btDecision"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/bt_decision"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:orientation="vertical"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/btDecision"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/tvHand"
-        app:layout_constraintVertical_bias="0.0">
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
 
         <RadioButton
             android:id="@+id/imageGu"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:background="@drawable/select_radio"
             android:button="@null"
             android:checked="true"
             android:drawableBottom="@drawable/janken_gu"
             android:text="@string/tv_gu"
-            android:textAlignment="center"
-            tools:ignore="VisualLintButtonSize" />
+            android:textAlignment="center" />
 
         <RadioButton
             android:id="@+id/imageChoki"
-            android:layout_width="match_parent"
+            android:layout_width="120dp"
             android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
             android:background="@drawable/select_radio"
             android:button="@null"
             android:drawableBottom="@drawable/janken_choki"
             android:text="@string/tv_choki"
-            android:textAlignment="center"
-            android:textSize="14sp"
-            tools:ignore="VisualLintButtonSize" />
+            android:textAlignment="center" />
 
         <RadioButton
             android:id="@+id/imagePa"
-            android:layout_width="match_parent"
+            android:layout_width="120dp"
             android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
             android:background="@drawable/select_radio"
             android:button="@null"
             android:drawableBottom="@drawable/janken_pa"
             android:text="@string/tv_pa"
-            android:textAlignment="center"
-            tools:ignore="VisualLintButtonSize" />
-
+            android:textAlignment="center" />
     </RadioGroup>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
+    <Button
+        android:id="@+id/btDecision"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="135dp" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:text="@string/bt_decision"
+        android:textSize="24sp" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="135dp" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
