@@ -53,6 +53,7 @@
             android:layout_height="120dp"
             android:background="@drawable/select_radio"
             android:button="@null"
+            android:checked="true"
             android:drawableBottom="@drawable/janken_gu"
             android:text="@string/tv_gu"
             android:textAlignment="center"
