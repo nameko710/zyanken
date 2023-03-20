@@ -10,4 +10,6 @@
     <string name="rt_draw">引き分け</string>
     <string name="rt_lose">負け</string>
     <string name="bt_back">戻る</string>
+    <string name="program_hand">相手の手</string>
+    <string name="player_hand">自分の手</string>
 </resources>

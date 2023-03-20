@@ -1,13 +1,12 @@
 package nameko710.android.zyanken
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,8 +38,7 @@ class MainActivity : AppCompatActivity() {
             val programHand = (1..3).random()
             val playerHand = zyanken[m]
 
-            var result = "結果待ち"
-            result = if (programHand == playerHand){
+            val result: String = if (programHand == playerHand){
                 "あいこ"
             } else if ((programHand - playerHand!!) == -2 || (programHand - playerHand) == 1){
                 "勝ち"

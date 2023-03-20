@@ -2,10 +2,9 @@ package nameko710.android.zyanken
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 
 class ResultActivity : AppCompatActivity() {
 
@@ -26,16 +25,17 @@ class ResultActivity : AppCompatActivity() {
         val playerHandImage = resultImage[playerHand]
         imageView1.setImageResource(playerHandImage!!)
 
-
         //相手が出した手を表示
         val imageView2 = findViewById<ImageView>(R.id.ivProgram)
         val programHand = intent.getIntExtra("programHand",0)
         val programHandImage = resultImage[programHand]
         imageView2.setImageResource(programHandImage!!)
-    }
 
-    fun onBackButtonClick(view: View){
-        finish()
+        //前の画面に戻る
+        val btBack = findViewById<Button>(R.id.btBack)
+        btBack.setOnClickListener{
+            finish()
+        }
     }
 }
 

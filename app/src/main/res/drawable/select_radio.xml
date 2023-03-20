@@ -6,5 +6,4 @@
       <solid android:color="#FFEB3B"/>
     </shape>
   </item>
-  <!--非選択時の設定-->
 </selector>
