@@ -34,13 +34,25 @@ class MainActivity : AppCompatActivity() {
         }
 
         fun game(m:String): Triple<Int, Int, String> {
-            val zyanken = mapOf("グー" to 1, "チョキ" to 2, "パー" to 3)
+
+            val playerHand: Int = when (m) {
+                "グー" -> {
+                    1
+                }
+                "チョキ" -> {
+                    2
+                }
+                // パーの場合は3
+                else -> {
+                    3
+                }
+            }
+
             val programHand = (1..3).random()
-            val playerHand = zyanken[m]
 
             val result: String = if (programHand == playerHand){
                 "あいこ"
-            } else if ((programHand - playerHand!!) == -2 || (programHand - playerHand) == 1){
+            } else if ((programHand - playerHand) == -2 || (programHand - playerHand) == 1){
                 "勝ち"
             } else{
                 "負け"
